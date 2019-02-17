@@ -3,61 +3,7 @@ import ReactDOM from 'react-dom';
 import pf from 'petfinder-client';
 
 import Pet from './Pet'
-// const App = () => {
-//     return (
-//         React.createElement('div',{}, [
-//             React.createElement('div', {}, 'ADOPT ME'),
-//             React.createElement(Pet,{
-//                 name: "Junip",
-//                 email: "Hello@gmail.com",
-//                 phonenumber: 9707190974
-//             }),
-//             React.createElement(Pet, {
-//                 name: "Lune",
-//                 email: "lunae@hotmail.com",
-//                 phonenumber: 9707190974
-//             }),
-//             React.createElement(Pet, {
-//                 name: "Daijee",
-//                 email: "daijee@junip.com",
-//                 phonenumber: 9707190974
-//             })
 
-//         ])
-//     )
-// }
-
-// const Pet = () => {
-//   return React.createElement("div", {}, [
-//     // React.createElement("div", {}, props.name),
-//     // React.createElement("div", {}, props.email),
-//     // React.createElement("div", {}, props.phonenumber)
-//   ])
-// }
-
-// class component for the same region
-// class App extends React.Component {
-//   render() {
-//     return React.createElement("div", {}, [
-//       React.createElement("div", {}, "ADOPT ME"),
-//       // React.createElement(Pet, {
-//       //   name: "Junip",
-//       //   email: "Hello@gmail.com",
-//       //   phonenumber: 9707190974
-//       // }),
-//       // React.createElement(Pet, {
-//       //   name: "Lune",
-//       //   email: "lunae@hotmail.com",
-//       //   phonenumber: 9707190974
-//       // }),
-//       // React.createElement(Pet, {
-//       //   name: "Daijee",
-//       //   email: "daijee@junip.com",
-//       //   phonenumber: 9707190974
-//       // })
-//     ]);
-//   }
-// }
 const petfinder = pf({
   key: process.env.API_KEY,
   secret: process.env.API_SECRET
@@ -73,10 +19,6 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    // const promise = petfinder.breed.list({
-    //   animal: "dog"
-    // })
-    // promise.then(console.log, console.error)
     petfinder.pet.find({ output: "full", location: "Seattle, WA" })
       .then(data => {
         /**
@@ -107,7 +49,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <Pet name="junip" email="test@gmail.com" phonenumber="71982731"></Pet> */}
         {this.state.pets.map(animal => {
           let breed;
           // breed may be one or two also

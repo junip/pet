@@ -29,7 +29,15 @@ const styles = theme => ({
 
 class Pet extends React.Component {
   render() {
-    const { classes, name, breed, media, location, animal, description } = this.props;
+    const {
+      classes,
+      name,
+      breed,
+      media,
+      location,
+      animal,
+      description
+    } = this.props;
 
     function getFirstLetter() {
       return name.split("")[0];
@@ -40,8 +48,8 @@ class Pet extends React.Component {
     }
 
     function subheader() {
-      let formatBreed = breed.split(',')[0]
-      return `${formatBreed}`
+      let formatBreed = breed.split(",")[0];
+      return `${formatBreed}`;
     }
 
     let photos = [];
@@ -73,7 +81,7 @@ class Pet extends React.Component {
           />
           <CardContent>
             <Typography component="p">
-              {description.substring(0,158)}...
+              {description.substring(0, 158)}...
             </Typography>
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>

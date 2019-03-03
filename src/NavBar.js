@@ -1,6 +1,6 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
-import { withStyles} from "@material-ui/core/styles"
+import { withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
@@ -10,15 +10,13 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const styles = theme => ({
   toolbar: {
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    alignItems: "center",
+    justifyContent: "space-between"
   }
 });
 
-
 class NavBar extends React.Component {
   render() {
-
     const { classes } = this.props;
 
     return (
@@ -32,13 +30,13 @@ class NavBar extends React.Component {
               Petfinder
             </Typography>
             <div>
-            <IconButton color="inherit">
-              <SearchIcon />
-            </IconButton>
-            <IconButton color="inherit">
-              <MoreVertIcon />
-            </IconButton>
-          </div>
+              <IconButton color="inherit">
+                <SearchIcon />
+              </IconButton>
+              <IconButton color="inherit">
+                <MoreVertIcon />
+              </IconButton>
+            </div>
           </Toolbar>
         </AppBar>
       </div>

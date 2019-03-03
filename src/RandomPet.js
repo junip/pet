@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Pet from "./Pet";
-import petfinder from './Api';
+import petfinder from "./Api";
 
 function RandomPet() {
   const [pets, updatePets] = useState([]);

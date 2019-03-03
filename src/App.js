@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 import RandomPet from "./RandomPet";
 
 const marginStyle = {
-  margin: '40px 0px 0px 0px'
+  margin: "40px 0px 0px 0px"
 };
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
       <div style={marginStyle}>
         <RandomPet />
       </div>
-      
     </div>
   );
 }

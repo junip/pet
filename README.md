@@ -1,6 +1,8 @@
 # React Petfinder
 A sample web app to search Pet using Petfinder API.
 
+![Interface](petfinder.png?raw=true "Web App picture")
+
 ## Prerequisites
 
 You are required to have [Node.js](https://nodejs.org/) installed to run the app locally.

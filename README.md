@@ -1,7 +1,7 @@
 # React Petfinder
 A sample web app to search Pet using Petfinder API.
 
-![Interface](petfinder.png?raw=true "Web App picture")
+![Interface](assets/petfinder.jpg?raw=true "Web App picture")
 
 ## Prerequisites
 
@@ -13,6 +13,8 @@ Install [petfinder-client](https://www.npmjs.com/package/petfinder-client)
 ```
 npm install petfinder-client --save
 ```
+
+## Getting API keys
 
 Register in [PetfinderAPI](https://www.petfinder.com/developers/api-key) to get API keys. Petfinder API allows you to search their database for available pets ready for adoption.
 
@@ -26,9 +28,21 @@ Make a new `.env` file and do the following
 ## Usage
 
 ```sh
-# First install all the project dependencies.
+# install project dependancy
+~/ npm install
 
 # Now run the app
 ~/ npm run dev 
 
-# app will run on port 1234
+```
+## Formatting
+
+```sh
+npm run format
+```
+
+## Clear Build
+
+```sh
+npm run clear
+```

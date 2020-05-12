@@ -34,8 +34,6 @@ class Pet extends React.Component {
       name,
       breed,
       media,
-      location,
-      animal,
       description
     } = this.props;
 
@@ -52,9 +50,9 @@ class Pet extends React.Component {
       return `${formatBreed}`;
     }
 
-    let photos = [];
-    if (media && media.photos && media.photos.photo) {
-      photos = media.photos.photo.filter(pic => pic["@size"] === "pn");
+    let photo
+    if (media.length > 0) {
+     photo =  media[0].medium
     }
 
     return (
@@ -76,12 +74,12 @@ class Pet extends React.Component {
           />
           <CardMedia
             className={classes.media}
-            image={photos[0].value}
+            image={photo}
             title="Animal Phto"
           />
           <CardContent>
             <Typography component="p">
-              {description.substring(0, 158)}...
+              {description}...
             </Typography>
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>

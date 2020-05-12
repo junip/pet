@@ -3,6 +3,8 @@ import Grid from "@material-ui/core/Grid";
 import Pet from "./Pet";
 import petfinder from "./Api";
 
+import pet, { ANIMALS } from "@frontendmasters/pet";
+
 function RandomPet() {
   const [pets, updatePets] = useState([]);
 
@@ -10,53 +12,37 @@ function RandomPet() {
     updatePets(pets_params);
   }
 
-  /** fetch data on using petfinder api */
-  function fetchdata() {
-    petfinder.pet
-      .find({ output: "full", location: "Seattle, WA" })
-      .then(data => {
-        /**
-         *  coming data from api may be single pet or array of pets
-         *  so check is enabled to know if it is an array or single pet
-         *  element, accordingly update the state
-         */
-        let pets;
-        let petfinderData = data.petfinder.pets;
-        if (petfinderData && petfinderData.pet) {
-          if (Array.isArray(petfinderData.pet)) {
-            pets = petfinderData.pet;
-          } else {
-            pets = [petfinderData.pet];
-          }
-        } else {
-          pets = [];
-        }
-        updatePetsData(pets);
-      });
+  async function requestPets() {
+    /*eslint no-debugger: "error"*/
+    let location = "Seattle, WA", breed = 'Akita', animal = 'dog';
+    const { animals } = await pet.animals({
+      location,
+      breed,
+      type: animal
+    });
+    console.log("animals", animals);
+  
+    updatePets(animals || []);
   }
-  //fetch data untill pets.lengths
+
   useEffect(() => {
-    fetchdata();
+    requestPets();
   }, [pets.length]);
 
   return (
     <div>
       <Grid container spacing={24}>
-        {pets.map(animal => {
+        {pets.length > 0 && pets.map(animal => {
           let breed;
           // breed may be one or two also
-          if (Array.isArray(animal.breeds.breed)) {
-            breed = animal.breeds.breed.join(", ");
-          } else {
-            breed = animal.breeds.breed;
-          }
+          breed = animal.breeds.primary
           return (
             <Pet
               key={animal.id}
               animal={animal.animal}
               name={animal.name}
               breed={breed}
-              media={animal.media}
+              media={animal.photos}
               description={animal.description}
               location={`${animal.contact.city}, ${animal.contact.state}`}
             />

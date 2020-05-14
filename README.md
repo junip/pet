@@ -1,7 +1,19 @@
-# React Petfinder
-A sample web app to search Pet using Petfinder API.
+<p align="center" >
+<img src="src/Images/wall.jpg" alt="drawing" style="max-width: 30%;"/>
+</p>
 
-![Interface](assets/petfinder.jpg?raw=true "Web App picture")
+<p align="center">
+  <a href="https://github.com/kamranahmedse/githunt">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" alt="contributions" />
+  </a>
+  <a href="https://github.com/junipdewan/githunt/blob/master/license.md">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="license-mit" />
+  </a>
+</p>
+
+
+# Pet
+A web app to search Pet using Petfinder API.
 
 ## Prerequisites
 

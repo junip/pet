@@ -9,6 +9,12 @@
     }
     .description {
       margin-top: 20px;
+      .name {
+        font-weight: $font-weight-bold;
+      }
     }
+  }
+  .right-header {
+    margin-top: 20px;
   }
 }

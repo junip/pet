@@ -1,9 +1,10 @@
 import React from "react";
 import './scss/main.scss'
+import Navbar from "./Navbar/Navbar"
 function App() {
   return (
     <div>
-      New react APP
+      <Navbar />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 <p align="center" >
-<img src="src/Images/wall.jpg" alt="drawing" style="width:300px;height:250px"/>
+<img src="src/Images/wall.jpg" alt="drawing" style="max-width: 30%;"/>
 </p>
 
 <p align="center">

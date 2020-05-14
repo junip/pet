@@ -1,7 +1,9 @@
 # React Petfinder
 A sample web app to search Pet using Petfinder API.
 
-![Interface](assets/petfinder.jpg?raw=true "Web App picture")
+
+
+![Interface](src/Images/wall.jpg "Web App picture")
 
 ## Prerequisites
 

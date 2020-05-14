@@ -1,13 +1,14 @@
 import React from 'react';
-import megaMan from "../Images/logo.jpg";
+import petLogo from "../Images/logo.jpg";
 const Navbar = () => {
   return(
-    <div className="navbar">
+   <div className="top-nav container mb-5 pb-4">
        <div className="logo-header">
-         <img src={megaMan} alt="logo" />
+         <img src={petLogo} alt="logo" />
+         <div className="description"> Petfinder Logo for the usages</div>
        </div>
-       <div className="side-header">
-          asd
+       <div className="right-header">
+         
        </div>
     </div>
   )

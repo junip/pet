@@ -1,0 +1,25 @@
+.animals-grid {
+  padding-top: 20px;
+  .grid-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    .pet-box {
+      width: 33%;
+      
+    }
+    .grid-container {
+      padding: 10px;
+      transition: all 0.3s ease;
+      .grid-body {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: -5px 10px 60px -13px rgba(0, 0, 0, 0.20);
+        height: 270px;
+      }
+    }
+  }
+}
+
+

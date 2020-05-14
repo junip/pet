@@ -9,6 +9,10 @@ You are required to have [Node.js](https://nodejs.org/) installed to run the app
 
 ## Getting Started
 
+Install [petfinder-client](https://www.npmjs.com/package/petfinder-client) 
+```
+npm install petfinder-client --save
+```
 
 ## Getting API keys
 

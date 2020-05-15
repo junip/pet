@@ -10,51 +10,44 @@
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="license-mit" />
   </a>
 </p>
+<p align="center">
+  <b>Get your favorite Pet</b></br>
+  <sub>✨ React app that helps you to find your favorite pet ✨<sub> 
+</p>
 
-
-# Pet
-A web app to search Pet using Petfinder API.
-
-## Prerequisites
-
-You are required to have [Node.js](https://nodejs.org/) installed to run the app locally.
-
-## Getting Started
-
-Install [petfinder-client](https://www.npmjs.com/package/petfinder-client) 
-```
-npm install petfinder-client --save
-```
-
-## Getting API keys
+### Generate API keys
 
 Register in [PetfinderAPI](https://www.petfinder.com/developers/api-key) to get API keys. Petfinder API allows you to search their database for available pets ready for adoption.
 
-Make a new `.env` file and do the following
+**Make a new `.env` file and add your secrets**
 
-```
+```sh
  API_KEY = your_api_key
  API_SECRET = your_api_secret
 ```
 
-## Usage
+```
+Run the app locally
 
-```sh
-# install project dependancy
-~/ npm install
-
-# Now run the app
-~/ npm run dev 
+~/ npm i & npm run dev 
 
 ```
-## Formatting
+## Scripts
 
 ```sh
+# Run locally
+npm run dev
+
+# Make production build
+npm run build
+
+# Code Formatting
 npm run format
-```
 
-## Clear Build
-
-```sh
+# Clear ./dist & ./cache folder
 npm run clear
 ```
+
+### LICENSE
+
+MIT @Junip Dewan

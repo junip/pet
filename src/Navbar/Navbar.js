@@ -3,11 +3,11 @@ import petLogo from "../Images/logo.jpg";
 const Navbar = () => {
   return (
     <div className="top-nav container mb-5 pb-2">
-      <div className="logo-header">
+      <div className="logo-header animated slideInLeft">
         <img src={petLogo} alt="logo" />
         <div className="description"><div className="name uppercase">Pet</div><div>Find Your Pet</div></div>
       </div>
-      <div className="right-header">
+      <div className="right-header animated slideInRight">
         <a href="https://github.com/junipdewan/pet" className="mr-2">
           <button type="button" className="btn btn-dark">
             <i className="fa fa-github mr-1"></i>View Source

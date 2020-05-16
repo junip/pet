@@ -1,3 +1,7 @@
+.spinner {
+  display: flex;
+  align-content: center;
+}
 .animals-grid {
   padding-top: 20px;
   .grid-boxes {
@@ -6,6 +10,7 @@
     align-content: flex-start;
     .pet-box {
       width: 33%;
+      cursor: pointer;
       
     }
     .grid-container {

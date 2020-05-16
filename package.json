@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@petfinder/petfinder-js": "^1.0.6",
+    "animate.css": "^4.1.0",
     "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.14.1",

@@ -15,6 +15,10 @@
   <sub>✨ React app that helps you to find your favorite pet ✨<sub> 
 </p>
 
+<p align="center">
+   <img src="src/Images/preview.jpg" alt="drawing" style="max-width: 30%;"/>
+</p>
+
 ### Generate API keys
 
 Register in [PetfinderAPI](https://www.petfinder.com/developers/api-key) to get API keys. Petfinder API allows you to search their database for available pets ready for adoption.
@@ -48,6 +52,11 @@ npm run format
 npm run clear
 ```
 
-### LICENSE
+### ToDo
 
+- [ ] Provide input from UI
+- [ ] Add Pet Details Page
+
+### LICENSE
 MIT @Junip Dewan
+

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import avatar from "../AvatarColor";
 
 const GridItem = ({ animal, index }) => {
   let backgroundImage = animal.photos.length > 0 ? animal.photos[0].medium : "";

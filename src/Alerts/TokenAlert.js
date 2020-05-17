@@ -6,7 +6,7 @@ const TokenAlert = () => {
       className="text-center alert alert-warning align-self-center animated flash delay-4s"
       role="alert"
     >
-      Make sure to ADD A TOKEN to avoid hitting the rate limit
+      Create your own API Token to avoid hitting the rate limit
     </div>
   );
 };

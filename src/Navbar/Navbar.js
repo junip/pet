@@ -5,7 +5,10 @@ const Navbar = () => {
     <div className="top-nav container mb-5 pb-2">
       <div className="logo-header animated slideInLeft">
         <img src={petLogo} alt="logo" />
-        <div className="description"><div className="name uppercase">Pet</div><div>Find Your Pet</div></div>
+        <div className="description">
+          <div className="name uppercase">Pet</div>
+          <div>Find Your Pet</div>
+        </div>
       </div>
       <div className="right-header animated slideInRight">
         <a href="https://github.com/junipdewan/pet" className="mr-2">

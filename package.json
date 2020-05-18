@@ -9,7 +9,8 @@
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html --open",
-    "clear": "rm -rf dist/ .cache/"
+    "clear": "rm -rf dist/ .cache/",
+    "build": "parcel build src/index.html --out-dir public"
   },
   "author": "",
   "license": "ISC",

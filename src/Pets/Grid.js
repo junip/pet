@@ -13,34 +13,33 @@ const Grid = () => {
   const loadingRef = useRef(loading);
   const currentPageRef = useRef(currentPage);
 
-
   useEffect(() => {
     getPets();
     window.addEventListener("scroll", handleScroll);
   }, []);
 
   /**
-   *  Event handling with functional components in react 
+   *  Event handling with functional components in react
    *  https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29
-   *  
+   *
    */
 
   // update the total page and reference
-  const updateTotalPage = (data) => {
-    pageRef.current = data
-    setTotalPage(data)
-  }
+  const updateTotalPage = data => {
+    pageRef.current = data;
+    setTotalPage(data);
+  };
 
   // Update loading state
-  const updateLoading = (data) => {
-    loadingRef.current = data 
-    setLoading(data)
-  }
+  const updateLoading = data => {
+    loadingRef.current = data;
+    setLoading(data);
+  };
 
-  const updateCurrentPage = (data) => {
-    currentPageRef.current = data 
-    setCurrentPage(data)
-  } 
+  const updateCurrentPage = data => {
+    currentPageRef.current = data;
+    setCurrentPage(data);
+  };
 
   /**
    * concat vs push to update the state using the hooks in react
@@ -49,10 +48,14 @@ const Grid = () => {
 
   const getPets = () => {
     // TODO - need to handle the input from the UI.
-    let searchTerm = { type: "dog", breed: "akita", page: currentPageRef.current };
+    let searchTerm = {
+      type: "dog",
+      breed: "akita",
+      page: currentPageRef.current
+    };
     pf.animal.search(searchTerm).then(response => {
-      let petsData = response.data
-      updatePets(pets => [...pets, petsData.animals].flat())
+      let petsData = response.data;
+      updatePets(pets => [...pets, petsData.animals].flat());
       updateTotalPage(petsData.pagination.total_pages);
       updateLoading(false);
     });
@@ -63,14 +66,15 @@ const Grid = () => {
   const handleScroll = () => {
     if (
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 300 &&
-      !loadingRef.current && !(currentPageRef.current >= pageRef.current)
-    )  {
+      !loadingRef.current &&
+      !(currentPageRef.current >= pageRef.current)
+    ) {
       updateLoading(true);
-      console.log("--CALLED-",  !loadingRef.current)
+      console.log("--CALLED-", !loadingRef.current);
       let nextPage = currentPageRef.current + 1;
       updateCurrentPage(nextPage);
       getPets();
-      console.log("--CALLED-",  !loadingRef.current)
+      console.log("--CALLED-", !loadingRef.current);
     }
   };
 
